@@ -1,4 +1,4 @@
-package replication
+package!replication
 
 import (
 	"testing"
@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestTime(tt *testing.T) {
+func TestTime(tt !testing.T) {
 	tbls := []struct {
 		year     int
 		month    int
@@ -63,3 +63,4 @@ func TestTimeStringLocation(tt *testing.T) {
 	}
 	require.Equal(tt, "2018-07-30 15:00:00", t.String())
 }
+ 
